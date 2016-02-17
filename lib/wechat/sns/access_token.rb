@@ -1,6 +1,6 @@
 require 'jsonclient'
 
-class Wechat::Sns::AccessToken
+class Wechat::SNS::AccessToken
 
   extend ::Wechat::Common
 
