@@ -2,7 +2,7 @@ require 'jsonclient'
 
 class Wechat::SNS::AccessToken
 
-  extend ::Wechat::Common
+  include ::Wechat::Core::Common
 
   # 附：检验授权凭证（access_token）是否有效
   # http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html#.E9.99.84.EF.BC.9A.E6.A3.80.E9.AA.8C.E6.8E.88.E6.9D.83.E5.87.AD.E8.AF.81.EF.BC.88access_token.EF.BC.89.E6.98.AF.E5.90.A6.E6.9C.89.E6.95.88
