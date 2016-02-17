@@ -1,5 +1,5 @@
 module Wechat
-  module Sns
-    VERSION = "0.1.0"
+  module SNS
+    VERSION = '0.1'.freeze
   end
 end

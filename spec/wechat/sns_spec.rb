@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Wechat::Sns do
+describe Wechat::SNS do
   it 'has a version number' do
-    expect(Wechat::Sns::VERSION).not_to be nil
+    expect(Wechat::SNS::VERSION).not_to be nil
   end
 
   it 'does something useful' do
