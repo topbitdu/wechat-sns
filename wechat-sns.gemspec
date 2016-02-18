@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = [ 'Topbit Du' ]
   spec.email         = [ 'topbit.du@gmail.com' ]
 
-  spec.summary       = %q{Wechat SNS Library}
-  spec.description   = %q{This gem is a low level library for Wechat SNS APIs.}
+  spec.summary       = %q{Wechat SNS Library 微信社交库}
+  spec.description   = %q{Wechat SNS Library is a wrapper for calling Wechat SNS APIs. 微信社交库封装了对微信社交API的调用。}
   spec.homepage      = 'https://github.com/topbitdu/wechat-sns'
   spec.license       = 'MIT'
 
@@ -30,5 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.11'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+
+  spec.add_dependency 'wechat-core', '~> 0.2'
 
 end

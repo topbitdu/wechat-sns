@@ -5,3 +5,6 @@
 
 ## v0.2
 1. Access Token wrapper class.
+
+## v0.3
+1. User Profile wrapper class.
