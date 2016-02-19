@@ -8,3 +8,6 @@
 
 ## v0.3
 1. User Profile wrapper class.
+
+## v0.4
+1, Improved Access Token wrapper class to paramiterize the Wechat App ID and Wechat App Secret.

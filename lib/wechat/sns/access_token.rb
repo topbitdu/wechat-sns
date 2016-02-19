@@ -44,10 +44,10 @@ class Wechat::SNS::AccessToken
   #   errcode: <ERROR_CODE>,
   #   errmsg:  <ERROR_MESSAGE>
   # }
-  def self.update(refresh_token)
+  def self.update(app_id, refresh_token)
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/refresh_token',
       {
-        appid:         Rails.application.secrets.wechat_app_id,
+        appid:         app_id,
         grant_type:    'refresh_token',
         refresh_token: refresh_token
       }
@@ -72,11 +72,11 @@ class Wechat::SNS::AccessToken
   #   errcode: <ERROR_CODE>,
   #   errmsg:  <ERROR_MESSAGE>
   # }
-  def self.create(code)
+  def self.create(app_id, app_secret, code)
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/access_token',
       {
-        appid:      Rails.application.secrets.wechat_app_id,
-        secret:     Rails.application.secrets.wechat_app_secret,
+        appid:      app_id,
+        secret:     app_secret,
         code:       code,
         grant_type: 'authorization_code'
       }
