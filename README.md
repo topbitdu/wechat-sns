@@ -55,7 +55,7 @@ end
 
 [Get User Profile per Access Token 第四步：拉取用户信息(需scope为 snsapi_userinfo)](http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html#.E7.AC.AC.E5.9B.9B.E6.AD.A5.EF.BC.9A.E6.8B.89.E5.8F.96.E7.94.A8.E6.88.B7.E4.BF.A1.E6.81.AF.28.E9.9C.80scope.E4.B8.BA_snsapi_userinfo.29)
 ```ruby
-response = Wechat::Sns::UserProfile.load access_token, open_id
+response = Wechat::SNS::UserProfile.load access_token, open_id
 if response.present? && response['errcode'].blank?
   open_id        = response['openid']
   nick_name      = response['nickname']
@@ -66,6 +66,18 @@ if response.present? && response['errcode'].blank?
   head_image_url = response['headimgurl']
   privilege      = response['privilege']
   union_id       = response['unionid']
+end
+```
+
+[Validate Access Token 附：检验授权凭证（access_token）是否有效](http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html#.E9.99.84.EF.BC.9A.E6.A3.80.E9.AA.8C.E6.8E.88.E6.9D.83.E5.87.AD.E8.AF.81.EF.BC.88access_token.EF.BC.89.E6.98.AF.E5.90.A6.E6.9C.89.E6.95.88)
+```ruby
+response = Wechat::SNS::AccessToken.load access_token, open_id
+if response.present? && 0==response['errcode']
+  # valid, do something more with the access_token
+  Wechat::SNS::UserProfile.load access_token, open_id
+else
+  # invalid, the access_token should be updated
+  Wechat::SNS::AccessToken.update Rails.application.secrets.wechat_app_id, refresh_token
 end
 ```
 
