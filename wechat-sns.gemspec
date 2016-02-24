@@ -4,15 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'wechat/sns/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'wechat-sns'
-  spec.version       = Wechat::SNS::VERSION
-  spec.authors       = [ 'Topbit Du' ]
-  spec.email         = [ 'topbit.du@gmail.com' ]
-
-  spec.summary       = %q{Wechat SNS Library 微信社交库}
-  spec.description   = %q{Wechat SNS Library is a wrapper for calling Wechat SNS APIs. 微信社交库封装了对微信社交API的调用。}
-  spec.homepage      = 'https://github.com/topbitdu/wechat-sns'
-  spec.license       = 'MIT'
+  spec.name        = 'wechat-sns'
+  spec.version     = Wechat::SNS::VERSION
+  spec.authors     = [ 'Topbit Du' ]
+  spec.email       = [ 'topbit.du@gmail.com' ]
+  spec.summary     = 'Wechat SNS Library 微信社交库'
+  spec.description = 'Wechat SNS Library is a wrapper for calling Wechat SNS APIs. 微信社交库封装了对微信社交API的调用。'
+  spec.homepage    = 'https://github.com/topbitdu/wechat-sns'
+  spec.license     = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.
