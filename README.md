@@ -5,6 +5,10 @@
 
 Wechat SNS library is a low level library for Wechat SNS APIs. 微信社交库是一个调用[微信社交API](http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html)的低层库。
 
+## Recent Update
+Check out the [Road Map](ROADMAP.md) to find out what's the next.
+Check out the [Change Log](CHANGELOG.md) to find out what's new.
+
 ## Installation
 
 Add this line to your application's Gemfile:
