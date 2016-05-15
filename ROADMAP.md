@@ -11,3 +11,6 @@
 
 ## v0.4
 1. Improved Access Token wrapper class to paramiterize the Wechat App ID and Wechat App Secret
+
+## v1.0
+1. Improved the wrapper classes to use Keywords Argument
