@@ -72,16 +72,17 @@ class Wechat::SNS::AccessToken
   #   errcode: <ERROR_CODE>,
   #   errmsg:  <ERROR_MESSAGE>
   # }
-  def self.create(app_id, app_secret, code)
+  def self.create(app_id, app_secret, code, grant_type: 'authorization_code')
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/access_token',
       {
         appid:      app_id,
         secret:     app_secret,
         code:       code,
-        grant_type: 'authorization_code'
+        grant_type: grant_type
       }
-    body = message.body
-    body.is_a?(Hash) ? body : JSON.parse(body)
+    message.body
+    #body = message.body
+    #body.is_a?(Hash) ? body : JSON.parse(body)
   end
 
 end
