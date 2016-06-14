@@ -23,15 +23,16 @@ class Wechat::SNS::UserProfile
   #   errcode: <ERROR_CODE>,
   #   errmsg:  <ERROR_MESSAGE>
   # }
-  def self.load(access_token, open_id, language = Wechat::Core::Common::LANGUAGE_SIMPLIFIED_CHINESE)
+  def self.load(access_token, open_id, language: Wechat::Core::Common::LANGUAGE_SIMPLIFIED_CHINESE)
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/userinfo',
       {
         access_token: access_token,
         openid:       open_id,
         lang:         language
       }
-    body = message.body
-    body.is_a?(Hash) ? body : JSON.parse(body)
+    message.body
+    #body = message.body
+    #body.is_a?(Hash) ? body : JSON.parse(body)
   end
 
 end
