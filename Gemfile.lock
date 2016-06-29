@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wechat-sns (0.4)
+    wechat-sns (1.0)
       wechat-core (~> 0.2)
 
 GEM
@@ -36,4 +36,4 @@ DEPENDENCIES
   wechat-sns!
 
 BUNDLED WITH
-   1.11.2
+   1.12.5
