@@ -13,4 +13,5 @@
 1. Improved Access Token wrapper class to paramiterize the Wechat App ID and Wechat App Secret
 
 ## v1.0
-1. Improved the wrapper classes to use Keywords Argument
+1. Improve the wrapper classes to use Keywords Argument
+2. Improve the Ruby Gem Specification to depend on wechat-core v0.3
