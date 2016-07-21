@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     wechat-sns (1.0)
-      wechat-core (~> 0.2)
+      wechat-core (~> 0.3)
 
 GEM
   remote: https://rubygems.org/
