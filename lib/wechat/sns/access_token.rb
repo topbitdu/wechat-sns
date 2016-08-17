@@ -19,6 +19,9 @@ class Wechat::SNS::AccessToken
   #   errmsg:  'invalid openid'
   # }
   def self.load(access_token, opend_id)
+
+    raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
+
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/auth',
       {
         access_token: access_token,
@@ -45,6 +48,9 @@ class Wechat::SNS::AccessToken
   #   errmsg:  <ERROR_MESSAGE>
   # }
   def self.update(app_id, refresh_token)
+
+    raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
+
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/refresh_token',
       {
         appid:         app_id,
@@ -73,6 +79,9 @@ class Wechat::SNS::AccessToken
   #   errmsg:  <ERROR_MESSAGE>
   # }
   def self.create(app_id, app_secret, code, grant_type: 'authorization_code')
+
+    raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
+
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/access_token',
       {
         appid:      app_id,
