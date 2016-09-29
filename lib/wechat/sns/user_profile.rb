@@ -2,6 +2,8 @@ require 'jsonclient'
 
 class Wechat::SNS::UserProfile
 
+  extend Wechat::Core::Common
+
   # 第四步：拉取用户信息(需scope为 snsapi_userinfo)
   # http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html#.E7.AC.AC.E5.9B.9B.E6.AD.A5.EF.BC.9A.E6.8B.89.E5.8F.96.E7.94.A8.E6.88.B7.E4.BF.A1.E6.81.AF.28.E9.9C.80scope.E4.B8.BA_snsapi_userinfo.29
   #
@@ -25,6 +27,7 @@ class Wechat::SNS::UserProfile
   # }
   def self.load(access_token, open_id, language: Wechat::Core::Common::LANGUAGE_SIMPLIFIED_CHINESE)
 
+    assert_present! :access_token, access_token
     raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
 
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/userinfo',
