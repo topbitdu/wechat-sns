@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](http://opensource.org/licenses/MIT)
 [![Gem Version](https://badge.fury.io/rb/wechat-sns.svg)](https://badge.fury.io/rb/wechat-sns)
+[![Dependency Status](https://gemnasium.com/badges/github.com/topbitdu/wechat-sns.svg)](https://gemnasium.com/github.com/topbitdu/wechat-sns)
 
 Wechat SNS library is a low level library for Wechat SNS APIs. 微信社交库是一个调用[微信社交API](http://mp.weixin.qq.com/wiki/9/01f711493b5a02f24b04365ac5d8fd95.html)的低层库。
 
