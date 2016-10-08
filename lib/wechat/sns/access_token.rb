@@ -51,7 +51,8 @@ class Wechat::SNS::AccessToken
   # }
   def self.update(app_id, refresh_token)
 
-    raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
+    assert_present! :app_id, app_id
+    # raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
 
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/refresh_token',
       {
