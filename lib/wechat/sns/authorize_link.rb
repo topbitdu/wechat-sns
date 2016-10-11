@@ -11,6 +11,7 @@ class Wechat::SNS::AuthorizeLink
   def self.create(wechat_app_id, redirect_link, response_type: Wechat::SNS::AuthorizeLink::RESPONSE_TYPE_CODE, scope: Wechat::SNS::AuthorizeLink::SCOPE_FULL, state: nil)
 
     assert_present! :wechat_app_id, wechat_app_id
+    assert_present! :redirect_link, redirect_link
     #raise ArgumentError.new('The wechat_app_id argument is required.') if wechat_app_id.blank?
 
     "https://open.weixin.qq.com/connect/oauth2/authorize?appid=#{wechat_app_id}&redirect_uri=#{CGI::escape redirect_link}&response_type=#{response_type}&scope=#{scope}&state=#{state}#wechat_redirect"
