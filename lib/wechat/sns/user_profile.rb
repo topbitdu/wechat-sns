@@ -28,7 +28,7 @@ class Wechat::SNS::UserProfile
   def self.load(access_token, open_id, language: Wechat::Core::Common::LANGUAGE_SIMPLIFIED_CHINESE)
 
     assert_present! :access_token, access_token
-    raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
+    #raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
 
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/userinfo',
       {
