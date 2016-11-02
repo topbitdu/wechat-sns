@@ -52,6 +52,7 @@ class Wechat::SNS::AccessToken
   def self.update(app_id, refresh_token)
 
     assert_present! :app_id, app_id
+    assert_present! :refresh_token, refresh_token
     # raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
 
     message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/refresh_token',
