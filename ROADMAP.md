@@ -15,3 +15,6 @@
 ## v1.0
 1. Improve the wrapper classes to support Keyword Arguments
 2. Improve the Ruby Gem Specification to depend on [wechat-core](https://github.com/topbitdu/wechat-core) v0.3
+
+## v1.0.1
+1. Improve the Ruby Gem Specification to depend on [wechat-core](https://github.com/topbitdu/wechat-core) v0.4
