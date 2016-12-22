@@ -31,7 +31,7 @@ class Wechat::SNS::UserProfile
     assert_present! :open_id, open_id
     #raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
 
-    message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/userinfo',
+    message = get_json 'https://api.weixin.qq.com/sns/userinfo', body:
       {
         access_token: access_token,
         openid:       open_id,
