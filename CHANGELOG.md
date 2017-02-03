@@ -15,3 +15,9 @@
 ## v1.0
 1. Improved the wrapper classes to use Keyword Arguments
 2. Improved the Ruby Gem Specification to depend on [wechat-core](https://github.com/topbitdu/wechat-core) v0.3
+
+## v1.0.1
+1. Improved the Ruby Gem Specification to depend on [wechat-core](https://github.com/topbitdu/wechat-core) v0.4
+2. Improve the Access Token wrapper class for the argument validation & HTTP request
+3. Improve the Authorize Link class for the argument validation
+4. Improve the User Profile wrapper class for the argument validation & HTTP request
