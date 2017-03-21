@@ -55,13 +55,12 @@ class Wechat::SNS::AccessToken
     assert_present! :refresh_token, refresh_token
     # raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
 
-    message = get_json 'https://api.weixin.qq.com/sns/oauth2/refresh_token', body:
+    get_json 'https://api.weixin.qq.com/sns/oauth2/refresh_token', body:
       {
         appid:         app_id,
         grant_type:    'refresh_token',
         refresh_token: refresh_token
       }
-    message.body
   end
 
   # 第二步：通过code换取网页授权access_token
