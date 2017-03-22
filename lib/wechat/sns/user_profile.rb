@@ -1,5 +1,3 @@
-require 'jsonclient'
-
 class Wechat::SNS::UserProfile
 
   extend Wechat::Core::Common
@@ -30,7 +28,6 @@ class Wechat::SNS::UserProfile
 
     assert_present! :access_token, access_token
     assert_present! :open_id, open_id
-    #raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
 
     message = get_json 'https://api.weixin.qq.com/sns/userinfo', body:
       {
