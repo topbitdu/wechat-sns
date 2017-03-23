@@ -29,13 +29,12 @@ class Wechat::SNS::UserProfile
     assert_present! :access_token, access_token
     assert_present! :open_id, open_id
 
-    message = get_json 'https://api.weixin.qq.com/sns/userinfo', body:
+    get_json 'https://api.weixin.qq.com/sns/userinfo', body:
       {
         access_token: access_token,
         openid:       open_id,
         lang:         language
       }
-    message.body
     #body = message.body
     #body.is_a?(Hash) ? body : JSON.parse(body)
   end
