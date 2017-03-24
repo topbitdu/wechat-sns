@@ -1,5 +1,8 @@
 require 'jsonclient'
 
+##
+# Access Token 是 SNS 统一登录访问令牌的封装类。
+# 不同于 Wechat::Common::AccessToken 。
 class Wechat::SNS::AccessToken
 
   extend Wechat::Core::Common
