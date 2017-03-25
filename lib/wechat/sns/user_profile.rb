@@ -1,3 +1,7 @@
+##
+# User Profile 是用户基本信息的封装类。如：
+# Wechat::SNS::UserProfile.load access_token, open_id
+
 class Wechat::SNS::UserProfile
 
   extend Wechat::Core::Common
