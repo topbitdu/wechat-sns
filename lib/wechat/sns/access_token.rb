@@ -88,16 +88,13 @@ class Wechat::SNS::AccessToken
 
     raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
 
-    message = ::JSONClient.new.get 'https://api.weixin.qq.com/sns/oauth2/access_token',
+    get_json 'https://api.weixin.qq.com/sns/oauth2/access_token', body:
       {
         appid:      app_id,
         secret:     app_secret,
         code:       code,
         grant_type: grant_type
       }
-    message.body
-    #body = message.body
-    #body.is_a?(Hash) ? body : JSON.parse(body)
   end
 
 end
