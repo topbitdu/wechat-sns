@@ -1,3 +1,7 @@
+##
+# Authorize Link 是授权链接类。用于生成授权链接。如：
+# Wechat::SNS::AuthorizeLink.create wechat_app_id, redirect_link
+
 class Wechat::SNS::AuthorizeLink
 
   extend Wechat::Core::Common
