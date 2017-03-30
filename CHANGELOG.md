@@ -21,3 +21,7 @@
 2. Improve the Access Token wrapper class for the argument validation & HTTP request
 3. Improve the Authorize Link class for the argument validation
 4. Improve the User Profile wrapper class for the argument validation & HTTP request
+
+## v1.0.2
+1. Improve the Access Token wrapper class for the HTTP request
+2. Improve the User Profile wrapper class for the HTTP request
