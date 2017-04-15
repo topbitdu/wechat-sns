@@ -86,7 +86,7 @@ class Wechat::SNS::AccessToken
   # }
   def self.create(app_id, app_secret, code, grant_type: 'authorization_code')
 
-    raise ArgumentError.new('The app_id argument is required.') if app_id.blank?
+    assert_present! :app_id, app_id
 
     get_json 'https://api.weixin.qq.com/sns/oauth2/access_token', body:
       {
