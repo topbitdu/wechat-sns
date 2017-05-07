@@ -26,7 +26,6 @@ class Wechat::SNS::AccessToken
 
     assert_present! :access_token, access_token
     assert_present! :opend_id,     opend_id
-    #raise ArgumentError.new('The access_token argument is required.') if access_token.blank?
 
     get_json 'https://api.weixin.qq.com/sns/auth', body:
       {
